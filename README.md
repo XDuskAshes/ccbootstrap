@@ -34,7 +34,7 @@ Before running `bootstrap.lua`, make sure you have a properly-made `ccbootstrap.
 }
 ```
 
-While all `operations` *are* optional, putting no operations just has `ccbootstrap` tell you to do that. Additionally, any *required* components inside of any of the `operations` are, of course, required for that operation.
+While all `operations` *are* optional, putting no operations just has `ccbootstrap` do nothing. Additionally, any *required* components inside of any of the `operations` are, of course, required for that operation.
 
 You also don't need *all* operations present - just one or some.
 
