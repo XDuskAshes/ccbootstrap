@@ -25,7 +25,7 @@ Before running `bootstrap.lua`, make sure you have a properly-made `ccbootstrap.
         "fetch"[ // Optional - fetch files from github repositories
             {
                 "repo":"torvalds/linux", // Required - The repo
-                "file":"Makefle", // Required - The filename
+                "file":"Makefile", // Required - The filename
                 "branch":"master" // Required - The branch to pull from
             }
             // So on and so forth
