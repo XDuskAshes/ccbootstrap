@@ -6,7 +6,7 @@ I made this program since - while yes, most of the time it's unnecessary - it co
 ## Usage
 Before running `bootstrap.lua`, make sure you have a properly-made `ccbootstrap.json` in the same directory. Here's a pretty loaded example:
 
-```json
+```jsonc
 {
     "meta":{ // Required
         "name":"Example",
