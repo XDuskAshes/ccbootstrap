@@ -11,7 +11,8 @@ Before running `bootstrap.lua`, make sure you have a properly-made `ccbootstrap.
     "meta":{ // Required
         "name":"Example",
         "description":"Example ccbootstrap.json",
-        "make_startup":true // Required - make a startup file for things like the path operation
+        "make_startup":true, // Required - make a startup file for things like the path operation
+        "verbose":true // Required - verbosity
     },
     "operations":{ // Required
         "settings":{ // Optional - Set settings
@@ -37,6 +38,24 @@ Before running `bootstrap.lua`, make sure you have a properly-made `ccbootstrap.
 While all `operations` *are* optional, putting no operations just has `ccbootstrap` do nothing. Additionally, any *required* components inside of any of the `operations` are, of course, required for that operation.
 
 You also don't need *all* operations present - just one or some.
+
+And for `operations.settings`, instead of:
+```
+bios.use_cash will be true
+list.show_hidden will be true
+(etc etc...)
+End of settings list - saving.
+```
+
+You'll get:
+```
+Setting and saving settings.. set and saved
+```
+
+`meta.verbose` will never affect `operations.path`.
+`meta.verbose` will eventually affect `operations.fetch`.
+
+-----
 
 Below are all operations, in-depth, one-by-one:
 
