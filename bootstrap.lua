@@ -51,13 +51,21 @@ if not bootstrapJSON.operations then
 end
 
 if bootstrapJSON.operations.settings then
-    print("Settings")
-    for sKey, vKey in pairs(bootstrapJSON.operations.settings) do
-        print(sKey,"will be",vKey)
-        settings.set(sKey,vKey)
+    if bootstrapJSON.meta.verbose == true then
+        write("Setting and saving settings")
+        for sKey, vKey in pairs(bootstrapJSON.operations.settings) do
+            write(".")
+            settings.set(sKey,vKey)
+        end
+        print(" set and saved")
+    else
+        print("Settings")
+        for sKey, vKey in pairs(bootstrapJSON.operations.settings) do
+            print(sKey,"will be",vKey)
+            settings.set(sKey,vKey)
+        end
+        print("End of settings list - saving")
     end
-    print("End of setttings list - saving")
-    settings.save()
 else
     print("There is no settings operation.")
 end
